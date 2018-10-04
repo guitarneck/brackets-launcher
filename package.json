@@ -1,0 +1,24 @@
+{
+  "name": "brackets-launcher",
+  "title": "System Command Launcher",
+  "description": "Execute system command inside Brackets.",
+  "homepage": "https://github.com/guitarneck/brackets-launcher",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "brackets": ">=0.44.0"
+  },
+  "keywords": [
+    "brackets",
+    "execute",
+    "command",
+    "launch",
+    "system",
+    "gulp",
+    "npm"
+  ],
+  "dependencies": {
+    "treekill": "0.0.0"
+  },
+  "devDependencies": {}
+}

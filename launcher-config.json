@@ -1,0 +1,113 @@
+{
+    "gulp":true,
+    "nmp":true,
+    
+    "colors":["#efefef","black"],
+    
+    "link":
+    {
+        "href": "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
+        "integrity": "sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU",
+        "crossorigin": "anonymous"
+    },
+    
+    "icons":
+    {
+        "style":"text-align:center;line-height: 1.8em;color:yellow"
+    },
+    
+    "menus":
+[{
+    "label": "Generate Zip Package",
+    "cmd": "git archive --format zip -o $projectName.zip master",
+    "args" : []
+},{
+    "label": "Git Status",
+    "cmd": "git status",
+    "args" : [],
+    "icon": {
+        "class":"fas fa-file-medical-alt"
+    }
+},{
+    "label": "Curl",
+    "cmd": "curl '$projectDir'",
+    "args" : [],
+    "splitChar": "|"
+},{
+    "label": "Git Commit All",
+    "cmd": "git commit -a -m '$0'",
+    "args" : ["Informe seu comentário aqui!"]
+},{
+    "label": "Git Push",
+    "cmd": "git push",
+    "args" : []
+},{
+    "label": "Git Pull",
+    "cmd": "git pull",
+    "args" : []
+},{
+    "divider":true
+},{
+    "label": "Show Current Dir",
+    "cmd": "pwd",
+    "args" : [],
+    "opts": {
+        "defaultPath": "./"
+    },
+    "icon": {
+        "class":"fas fa-folder",
+        "style":"text-align:center;line-height: 1.8em;color:lightgreen"
+    }
+},{
+    "label": "Show Current Dir Selected File",
+    "cmd": "pwd",
+    "args" : [],
+    "opts": {
+        "defaultPath": "$dirOfSelectedFile"
+    }
+},{
+    "label": "Show default Current Dir",
+    "cmd": "pwd"
+},{
+    "label": "Echo File",
+    "cmd": "cat $selectedFile",
+    "args" : [],
+    "opts": {
+        "defaultPath": "$dirOfSelectedFile"
+    }
+},{
+    "label": "Infinite Loop",
+    "cmd": "while :; do echo 'Kill me!'; sleep 1; done",
+    "args" : []
+},{
+    "label": "Loop Without Console",
+    "cmd": "while :; do echo 'Kill me!'; sleep 2; done",
+    "args" : [],
+    "opts" : {
+        "hiddenConsole": true
+    }
+},{
+    "label": "Open Firefox",
+    "cmd": "firefox 'http://$0'",
+    "args" : ["www.google.com.br"]
+},{
+    "label": "Commit And Push",
+    "cmd": "git commit -a -m '$0' && git push",
+    "args" : ["Updates..."]
+},{
+    "label": "New Commit And Push 2",
+    "cmd": "git commit -a -m '$0' && git push",
+    "args" : ["Updates..."]
+},{
+    "label": "Run Jboss",
+    "cmd": "~/Develop/jboss-6.1.0.eldoc/bin/run.sh",
+    "args" : [],
+    "opts": {
+        "killCmd": "~/Develop/jboss-6.1.0.eldoc/bin/shutdown.sh -S"
+    }
+},{
+    "label": "Echo With Color",
+    "cmd" : "echo -e \"Normal \\033[0;32;41mGREEN TEXT & RED BACK\\033[0m Normal\"",
+    "args": []
+}]
+}
